@@ -1,0 +1,33 @@
+d <- density(LungCapData$LungCap)
+ plot(d)
+
+
+e <- density(LungCapData$Age)
+ plot(e)
+
+f <- density(LungCapData$Height)
+ plot(f)
+
+d <- density(LungCapData$LungCap, adjust = 10)
+plot(d)
+d <- density(LungCapData$LungCap, adjust = .1)
+plot(d)
+
+
+e <- density(LungCapData$Age, adjust = 10)
+plot(e)
+e <- density(LungCapData$Age, adjust = .1)
+plot(e)
+
+
+f <- density(LungCapData$Height, adjust = 10)
+plot(f)
+f <- density(LungCapData$Height, adjust = .1)
+plot(f)
+
+
+plot(density(log10(e[["x"]]),e[["y"]]))
+
+plot(density(log10(f[["x"]]),f[["y"]]))
+
+plot(log10(d[["x"]]),d[["y"]])
